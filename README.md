@@ -15,43 +15,42 @@ Ideato da [Alvioinsights.com](https://alvioinsights.com)e sviluppato da Google G
 - **Python:** Versione 3.9 o superiore installata nel sistema
 - **Connessione Internet:** Necessaria per il download dei dati finanziari in tempo reale tramite le API di Yahoo Finance.
 
-## 🚀 Installazione
+## 🚀 Installazione (Aggiornata per superare i blocchi GitHub e macOS)
 
-L'installazione richiede meno di due minuti. Segui questi step nel tuo terminale:
+Per evitare problemi di permessi o conflitti di sistema, ecco la via più sicura per installare la suite.
 
-**1. Clona il repository**
-```bash
-git clone https://github.com/tuo-username/value-investing-suite.git
-cd value-investing-suite
-```
+**1. Scarica il progetto**
+Il modo più semplice (se non vuoi usare `git` o hai problemi di password con GitHub) è cliccare sul pulsante verde **"<> Code"** in alto a destra su questa pagina e selezionare **"Download ZIP"**. Estrai la cartella sul tuo computer e aprila con il terminale.
 
-**2. Crea e attiva un ambiente virtuale (Consigliato)**
+Se preferisci usare Git (assicurati di usare HTTPS):
+`git clone https://github.com/alvioinsights/value-investing-suite.git`
+`cd value-investing-suite`
+
+**2. Crea l'ambiente virtuale**
+Questo passaggio è fondamentale per non "sporcare" il tuo sistema operativo.
 
 *Su Windows:*
-```bash
-python -m venv venv
-venv\Scripts\activate
-```
+`python -m venv venv`
+`venv\Scripts\activate`
 
-*Su macOS/Linux:*
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
+*Su macOS / Linux:*
+*(Nota per utenti Mac: usate sempre `python3` e assicuratevi di aver installato Python via Homebrew se il sistema vi dà errori).*
+`python3 -m venv venv`
+`source venv/bin/activate`
 
 **3. Installa le dipendenze**
-```bash
-pip install -r requirements.txt
-```
-*(Nota: Assicurati che il file `requirements.txt` contenga `streamlit`, `yfinance`, `pandas`, `numpy`, `pandas-ta`, `plotly`)*.
+Abbiamo sostituito il vecchio pacchetto `pandas-ta` (non più open-source) con il fork supportato dalla community `pandas-ta-classic`.
+`pip install -r requirements.txt`
 
-## ⚡ Quickstart (Guida Rapida)
+## ⚡ Avvio Rapido
 
-Avvia l'applicazione locale eseguendo questo comando nel terminale:
+Una volta attivato l'ambiente virtuale, lancia l'app con:
 
-```bash
-streamlit run main.py
-```
+*Su Windows:*
+`streamlit run main.py`
+
+*Su macOS / Linux:*
+`python3 -m streamlit run main.py`
 
 Il tuo browser si aprirà automaticamente su `http://localhost:8501`. 
 
